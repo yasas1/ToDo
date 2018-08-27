@@ -7,7 +7,15 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  tasks=[];
+
+  constructor(public nav: NavController) {
+    this.nav=nav;
+
+    this.tasks=[
+      {task:'task1', priority:'low' ,status:'pending'},
+      {task:'task2', priority:'high' ,status:'done'}
+    ]
 
   }
 
