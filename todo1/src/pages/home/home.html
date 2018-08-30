@@ -3,11 +3,11 @@
     <ion-title>
       ToDo List
     </ion-title>
-    <ion-button end>
+    <ion-buttons end>
       <button>
         <ion-icon name="add-circle"></ion-icon>
       </button>
-    </ion-button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -18,7 +18,7 @@
       No tasks
       <p>Click <ion-icon name="add-circle"></ion-icon> to add task </p>
     </ion-item>
-    <ion-item-sliding *ngFor="t of tasks">
+    <ion-item-sliding *ngFor="let t of tasks">
       <ion-item>
         <ion-toggle></ion-toggle>
         <ion-label>
@@ -29,7 +29,7 @@
 
       <ion-item-options>
         <button primary> <ion-icon name="clipboard"></ion-icon> Edit </button>
-        <button danger> <ion-icon name="clipboard"></ion-icon> Delete </button>
+        <button danger> <ion-icon name="trash"></ion-icon> Delete </button>
       </ion-item-options>
 
     </ion-item-sliding>

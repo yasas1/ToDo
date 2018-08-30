@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -8,6 +8,10 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
   tasks=[];
+
+  static get parameters(){
+    return [ [NavController] ]
+  }
 
   constructor(public nav: NavController) {
     this.nav=nav;
