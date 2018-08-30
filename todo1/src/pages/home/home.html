@@ -20,16 +20,16 @@
     </ion-item>
     <ion-item-sliding *ngFor="let t of tasks">
       <ion-item>
-        <ion-toggle></ion-toggle>
+        <ion-toggle> </ion-toggle>
         <ion-label>
-          <h2 [ngClass]="t.status">{{t.task}}</h2>
-          <p [ngClass]="t.priority">{{t.priority}}</p>
+          <p style="color: #000;" [ngClass]="t.status"> {{t.task}} </p><br>
+          <p [ngClass]="t.priority"> {{t.priority}} </p>
         </ion-label>
       </ion-item>
 
       <ion-item-options>
-        <button primary> <ion-icon name="clipboard"></ion-icon> Edit </button>
-        <button danger> <ion-icon name="trash"></ion-icon> Delete </button>
+        <button ion-button> <ion-icon name="clipboard"></ion-icon> Edit </button>
+        <button ion-button color="danger"> <ion-icon name="trash"></ion-icon> Delete </button>
       </ion-item-options>
 
     </ion-item-sliding>
