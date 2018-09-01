@@ -4,7 +4,7 @@
       ToDo List
     </ion-title>
     <ion-buttons end>
-      <button [navPush]="modalPage">
+      <button (click)="showModal()">
         <ion-icon color="primary" name="add-circle"></ion-icon>
       </button>
     </ion-buttons>
@@ -14,7 +14,7 @@
 <ion-content >
   
   <ion-list>
-    <ion-item *ngIf="tasks.length">
+    <ion-item *ngIf="!tasks.length">
       No tasks
       <p>Click <ion-icon name="add-circle"></ion-icon> to add task </p>
     </ion-item>

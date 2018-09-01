@@ -10,25 +10,26 @@
     Add Task
   </ion-title>
   <ion-buttons start>
-    <button ion-button color="light">
-      <span >Cancel</span>
-      <ion-icon name="close" showwhen="android"></ion-icon>
+    <button ion-button color="light" (click)="close()">
+      <span>Cancel</span>
+      <ion-icon name="close"></ion-icon>
     </button>
   </ion-buttons>
 
-</ion-toolbar>
-
+</ion-toolbar><br>
+<br><br>
 <ion-content>
+    <br><br><br>
+  <ion-list>
 
-  <ion-list>]
     <ion-item>
-      <ion-label stacked>Task</ion-label>
-      <ion-input type="text" [(ngModel)]="task"></ion-input>
+      <ion-label color="primary" stacked>Task</ion-label>
+      <ion-input type="text" [(ngModel)]="task" placeholder="Task Input">Task</ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label stacked>Priority</ion-label>
-      <ion-select  [(ngModel)]="Priority">
+      <ion-label >Priority</ion-label>
+      <ion-select [(ngModel)]="Priority"  >
         <ion-option value="high">High</ion-option>
         <ion-option value="normal">Normal</ion-option>
         <ion-option value="low">Low</ion-option>
@@ -37,8 +38,8 @@
 
   </ion-list>
 
-  <div>
-    <button ion-button round>Save</button>
+  <div padding>
+    <button ion-button full round>Save</button>
   </div>
 
 </ion-content>

@@ -10,8 +10,6 @@ export class HomePage {
 
   tasks=[];
 
-  modalPage = ModalPage;
-
   static get parameters(){
     return [ [NavController] ]
   }
@@ -27,8 +25,7 @@ export class HomePage {
   }
 
   showModal(){
-    let modal = this.modalCtrl.create(ModalPage);
-    modal.present();
+    this.nav.push(ModalPage);
   }
 
 }
