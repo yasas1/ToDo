@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
+import { ModalPage } from '../modal/modal';
 
 @Component({
   selector: 'page-home',
@@ -9,11 +10,13 @@ export class HomePage {
 
   tasks=[];
 
+  modalPage = ModalPage;
+
   static get parameters(){
     return [ [NavController] ]
   }
 
-  constructor(public nav: NavController) {
+  constructor(public nav: NavController, public modalCtrl: ModalController) {
     this.nav=nav;
 
     this.tasks=[
@@ -21,6 +24,11 @@ export class HomePage {
       {task:'task2', priority:'high' ,status:'done'}
     ]
 
+  }
+
+  showModal(){
+    let modal = this.modalCtrl.create(ModalPage);
+    modal.present();
   }
 
 }
